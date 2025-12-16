@@ -1,0 +1,27 @@
+let total = 0;
+const objectif = 2200;
+
+function ajouter() {
+  const nom = document.getElementById("nom").value;
+  const calories = Number(document.getElementById("calories").value);
+
+  if (!nom || !calories) return;
+
+  total += calories;
+
+  document.getElementById("total").textContent = total;
+  document.getElementById("restant").textContent = objectif - total;
+
+  const li = document.createElement("li");
+  li.textContent = `${nom} - ${calories} kcal`;
+  document.getElementById("liste").appendChild(li);
+
+  document.getElementById("nom").value = "";
+  document.getElementById("calories").value = "";
+}
+
+function reset() {
+  total = 0;
+  document.getElementById("total").textContent = 0;
+  document.getElementById("restant").textContent = objectif;
+  document.getElementById("liste").innerHTML = "";
