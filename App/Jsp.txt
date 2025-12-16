@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🔥 Calorie Tracker</h1>
+
+  <div class="stats">
+    <p>Calories : <span id="total">0</span> / <span id="objectif">2200</span></p>
+    <p>Restant : <span id="restant">2200</span></p>
+  </div>
+
+  <div class="form">
+    <input type="text" id="nom" placeholder="Aliment">
+    <input type="number" id="calories" placeholder="Calories">
+    <button onclick="ajouter()">Ajouter</button>
+  </div>
+
+  <ul id="liste"></ul>
+
+  <button class="reset" onclick="reset()">Nouvelle journée</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
